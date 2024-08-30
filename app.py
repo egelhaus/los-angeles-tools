@@ -2,11 +2,11 @@ from flask import Flask, redirect, url_for, session, request, render_template
 from database import save_user, get_staff
 
 app = Flask(__name__)
-app.secret_key = 'SECRET_KEY'
+app.secret_key = 'dein_secret_key'
 
 @app.route('/')
 def index():
-    return 'Welcome to the Staff Dashboard'
+    return 'Willkommen im Staff Dashboard'
 
 @app.route('/add_staff', methods=['GET', 'POST'])
 def add_staff():

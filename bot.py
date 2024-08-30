@@ -13,7 +13,7 @@ async def on_ready():
 # Beispiel-Kommando
 @bot.command()
 async def ping(ctx):
-    await ctx.send('Ping successfully sent')
+    await ctx.send('Pong Dev Cmd Successful')
 
 
 # Füge hier weitere Befehle hinzu...
