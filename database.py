@@ -29,3 +29,6 @@ def get_staff():
     users = c.fetchall()
     conn.close()
     return users
+
+if __name__ == '__main__':
+    init_db()
