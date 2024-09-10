@@ -1,14 +1,17 @@
 #!/bin/bash
 
+set -e  # Beendet das Skript bei jedem Fehler
+
 # Aktualisiere und installiere notwendige Pakete
 apt update
 apt install npm python3 python3-venv python3-pip python3-full -y
 
 # Erstelle und aktiviere die virtuelle Umgebung
 python3 -m venv venv
-. venv/bin/activate
+source venv/bin/activate
 
 # Installiere Abhängigkeiten
+pip install --upgrade pip  # Stelle sicher, dass pip aktuell ist
 pip install --break-system-packages -r requirements.txt
 
 # Installiere Linter und Sicherheits-Tools
