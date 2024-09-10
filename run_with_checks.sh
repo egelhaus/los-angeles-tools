@@ -8,7 +8,20 @@ apt install npm python3 python3-venv python3-pip python3-full -y
 
 # Erstelle und aktiviere die virtuelle Umgebung
 python3 -m venv venv
+
+# Überprüfe, ob die virtuelle Umgebung erfolgreich erstellt wurde
+if [ ! -d "venv" ]; then
+    echo "Fehler: Die virtuelle Umgebung wurde nicht erstellt."
+    exit 1
+fi
+
 source venv/bin/activate
+
+# Überprüfe, ob `pip` in der virtuellen Umgebung verfügbar ist
+if [ ! -x "$(command -v pip)" ]; then
+    echo "Fehler: pip ist in der virtuellen Umgebung nicht verfügbar."
+    exit 1
+fi
 
 # Installiere Abhängigkeiten
 pip install --upgrade pip  # Stelle sicher, dass pip aktuell ist
