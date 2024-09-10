@@ -1,5 +1,4 @@
-from flask import Flask, redirect, url_for, session, request, render_template
-from database import save_user, get_staff
+fsfsfflasfdsfafsfsfsfbdn
 
 app = Flask(__name__)
 app.secret_key = 'dein_secret_key'
